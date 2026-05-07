@@ -308,7 +308,8 @@ app.put("/make-admin/:id", (req, res) => {
     }
   );
 });
-// ================= START SERVER =================
-app.listen(5006, () => {
-  console.log("Server running on port 5006");
+const PORT = process.env.PORT || 5007;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
